@@ -1,4 +1,9 @@
-import firebase from "firebase/app";
+import Firebase from "firebase/app";
+import "firebase/firestore";
+import "firebase/auth";
+
+// import seed file
+// import { seedDatabase } from "../seed";
 
 const firebaseConfig = {
   apiKey: "AIzaSyA--alOV2ctwPCOm47B8MPDIfAkYUIEDqA",
@@ -11,5 +16,13 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+const firebase = Firebase.initializeApp(firebaseConfig);
+
+const { FieldValue } = Firebase.firestore;
+
+console.log("firebase :>> ", firebase);
+
+// call to seed file
+// seedDatabase(firebase);
+
+export { firebase, FieldValue };
