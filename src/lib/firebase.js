@@ -20,8 +20,6 @@ const firebase = Firebase.initializeApp(firebaseConfig);
 
 const { FieldValue } = Firebase.firestore;
 
-console.log("firebase :>> ", firebase);
-
 // call to seed file
 // seedDatabase(firebase);
 
